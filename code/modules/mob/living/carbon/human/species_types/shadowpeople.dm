@@ -33,6 +33,10 @@
 	if(SSevents.holidays && SSevents.holidays[HALLOWEEN])
 		return TRUE
 	return ..()
+	
+/datum/species/shadowperson/before_equip_job(datum/job/J, mob/living/carbon/human/H, visualsOnly = FALSE)
+    var/obj/item/flashdark/flashdark = new(H)
+    H.put_in_hands(flashdark)
 
 /datum/species/shadow/nightmare
 	name = "Nightmare"
